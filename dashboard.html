@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: sans-serif;
+            font-weight: 700;
+        }
+        body{
+            height:100vh ;
+
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            grid-template-rows: 105px 1fr;
+        }
+        .header{
+            background-color: #fff;
+            
+
+            grid-column:2 / 3 ;
+            grid-row: 1 / 2;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            
+        }
+        .header-item:nth-child(1){
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr ;
+            align-items: center;
+           justify-items: center;
+           margin: -12px 0px 0px 30px; 
+        }
+        
+        .header-item:nth-child(2){
+           display: grid;
+           grid-template-columns: 1fr 1fr 1fr 1fr ; 
+        }
+
+        .header-item:nth-child(3){
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+        }
+        .header-item:nth-child(3) div p{
+            font-weight: lighter;
+        }
+        
+        .header-item:nth-child(4){
+            display: grid;
+
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+           align-items: center;
+           justify-items: center;
+           margin-left: 70px 0px 0px 30px;  
+        }
+        .header-item:nth-child(4) div{
+        background-color: #024d70;
+        padding: 5px 30px 5px 30px;
+        border-radius: 50px;
+        margin: 0px 12px 0px 8px;
+        color: #fff;
+        font-size: .9rem;
+        font-weight: normal;
+        
+            
+            
+        }
+
+        
+        .sidebar{
+            background-color: #024d70;
+
+            grid-column: 1 / 2;
+            grid-row: 1 / 3;
+
+            display: grid;
+          
+            grid-template-rows: 1fr 1fr 4fr;
+        }
+
+        .sidebar .heading{
+            display:grid;
+            grid-template-columns: 1fr 8fr;
+            color: white;
+        }
+        .heading:nth-child(2){
+            display: grid;
+            grid-template-columns: 1fr 8fr;
+            grid-template-rows: repeat(8, 1fr);
+            
+        }
+        .heading:nth-child(3){
+            display: grid;
+            grid-template-columns: 1fr 8fr;
+            grid-template-rows: repeat(8, 1fr);
+            
+        }
+
+        
+            
+        
+       
+        .main{
+            background-color: #c3c5ca;
+
+            grid-column: 2 / 3;
+            padding: 10px;
+            grid-row: 2 / 3;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-areas: 
+            "c1 c2 c3"
+            "c4 c5 c6"
+            "c7 c8 c9";
+            gap: 10px;
+
+            margin-top: 10px;
+
+        }
+        .cards{
+            background-color: #f6f7f9;
+            border-radius: 10px;
+        }
+        .cards:nth-child(1){
+            grid-area: c1;
+
+        display: grid;
+        grid-template-columns: 5px 1fr;
+        grid-template-rows:30px 1fr 30px;
+
+            
+        }
+        
+
+        .cards:nth-child(2){
+            grid-area: c2;
+
+            display: grid;
+        grid-template-columns: 5px 1fr;
+        grid-template-rows:30px 1fr 30px;
+        }
+
+        .cards:nth-child(3){
+            grid-area: c3;
+            
+        
+
+            display: grid;
+        grid-template-columns: 5px 1fr;
+        grid-template-rows:30px 1fr 30px;
+        }
+
+        .cards:nth-child(4){
+            grid-area: c4;
+
+            display: grid;
+        grid-template-columns: 5px 1fr;
+        grid-template-rows:30px 1fr 30px;
+        }
+        .cards:nth-child(5){
+            grid-area: c5;
+            
+
+            display: grid;
+        grid-template-columns: 5px 1fr;
+        grid-template-rows:30px 1fr 30px;
+        }
+        .cards:nth-child(6){
+            grid-area: c6;
+            
+            display: grid;
+        grid-template-columns: 5px 1fr;
+        grid-template-rows:30px 1fr 30px;
+        }
+
+        .cards:nth-child(7){
+            grid-area: c7;
+            
+            display: grid;
+        grid-template-columns: 5px 1fr;
+        grid-template-rows:30px 1fr 30px;
+        }
+
+        .cards:nth-child(8){
+            grid-area: c8;
+            
+            display: grid;
+        grid-template-columns: 5px 1fr;
+        grid-template-rows:30px 1fr 30px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+       <div class="header-item"><img src="icons/search.png" alt="search" width="20px" height="20px" style=" margin-top: 10px;" >
+            <input type="text"  style="border-radius: 50px; width: 430px; height: 20px; margin-top: 10px;">
+        </div>
+
+        <div class="header-item">
+            <div><img src="icons/notification.png" alt="search" width="20px" height="20px" style="display: flex; margin: 20px 0px 10px 90px;"></div> 
+
+        <div>
+            <img src="icons/logo1.png" alt="logo" width="50px" height="35px" style="display: flex; margin: 12px 10px 10px 30px;">
+        </div>
+        <div>
+            <h3 style="display: flex; margin: 20px 0px 10px 0px;"><span style="color:#024d70 ;">Infinite</span><span style="color:#e98a0e;">Coding</span></h3>
+        </div>
+        </div>
+
+        <div class="header-item">
+           <div>
+                <img src="icons/logo1.png" alt="logo" width="100px" height="55px" style="margin-top: -8px; margin-left:30px;">
+           </div>
+           <div>
+            <p>Hi there,</p>
+            <h3><span style="color:#024d70 ;">Infinite</span><span style="color:#e98a0e;">Coding</span></h3>
+           </div>
+        </div>
+
+        <div class="header-item">
+             <div>New</div>
+            <div>Upload</div>
+            <div>Share</div>
+        </div>
+    
+    </header>
+
+    <div class="sidebar">
+        <div class="heading">
+            <img src="icons/menu.png" alt="menu icon" width="30ppx" style="margin: 10px 3px 5px 10px;">
+            <h3 style="margin: 15px 20px 5px 10px;">Dashboard</h3>
+        </div>
+
+        <div class="heading">
+            <img src="icons/home.png" alt="home icon" width="20px" style="margin: 10px 3px 5px 10px;">
+            <h5 style="align-self: center;margin: 15px 20px 5px 10px">Home</h5>
+
+            <img src="icons/profile.png" alt="profile" width="20ppx" style="margin: 10px 3px 5px 10px;">
+            <h5 style="align-self: center;margin: 15px 20px 5px 10px">Profile</h5>
+
+            <img src="icons/message.png" alt="message icon" width="20px" style="margin: 10px 3px 5px 10px;">
+            <h5 style="align-self: center;margin: 15px 20px 5px 10px">Message</h5>
+
+            <img src="icons/history.png" alt="history icon" width="20ppx" style="margin: 10px 3px 5px 10px;">
+            <h5 style="align-self: center;margin: 15px 20px 5px 10px">History</h5>
+
+            <img src="icons/task.png" alt="home icon" width="20ppx" style="margin: 10px 3px 5px 10px;">
+            <h5 style="align-self: center;margin: 15px 20px 5px 10px">Task</h5>
+
+            <img src="icons/community.png" alt="home icon" width="20ppx" style="margin: 10px 3px 5px 10px;">
+            <h5 style="align-self: center;margin: 15px 20px 5px 10px">Community</h5>
+        </div>
+
+        <div class="heading">
+            <img src="icons/settings.png" alt="menu icon" width="20ppx" style="margin: 10px 3px 5px 10px; align-self: center;">
+            <h5 style="margin: 15px 20px 5px 10px; align-self: center;">Settings</h5>
+
+            <img src="icons/support.png" alt="menu icon" width="20ppx" style="margin: 10px 3px 5px 10px; align-self: center;">
+            <h5 style="margin: 15px 20px 5px 10px; align-self: center;">Support</h5>
+
+            <img src="icons/privacy.png" alt="menu icon" width="20ppx" style="margin: 10px 3px 5px 10px; align-self: center;">
+            <h5 style="margin: 15px 20px 5px 10px; align-self: center;">Privacy</h5>
+        </div>
+    </div>
+
+    <main class="main">
+        <div class="cards">
+            <div style="background-color: #e98a0e; width: 5px; height: 176px; border-top-left-radius: 10px; border-bottom-left-radius: 10px; grid-area: 1/-3;"></div>
+            <div style="height: 400px; text-align:left;margin-top: 10px; font-size:13px;">
+                Super Cool Project
+            </div>
+            <div style="width: 250px; align-self: left;text-align: left; margin-left: 10px; font-weight: normal; font-size: 13px;">
+                >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis quas qui ut cumque, iure exercitationem dicta corporis harum itaque unde odit deserunt quasi illo pariatur, praesentium libero odio! Quasi, porro?
+            </div> 
+        </div>
+        <div class="cards">
+            <div style="background-color: #e98a0e; width: 5px; height: 176px; border-top-left-radius: 10px; border-bottom-left-radius: 10px; grid-area: 1/-3;"></div>
+            <div style="height: 400px; text-align: left;margin-top: 10px; font-size:13px;">
+                Super Cool Project
+            </div>
+            <div style="width: 250px; align-self: left;text-align: left; margin-left: 10px; font-weight: normal; font-size: 13px;">
+                >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis quas qui ut cumque, iure exercitationem dicta corporis harum itaque unde odit deserunt quasi illo pariatur, praesentium libero odio! Quasi, porro?
+            </div> 
+        </div>
+        <div class="cards">
+            
+        </div>
+        <div class="cards">
+            <div style="background-color: #e98a0e; width: 5px; height: 176px; border-top-left-radius: 10px; border-bottom-left-radius: 10px; grid-area: 1/-3;"></div>
+            <div style="height: 400px; text-align: left;margin-top: 10px; font-size:13px;">
+                Super Cool Project
+            </div>
+            <div style="width: 250px; align-self: left;text-align: left; margin-left: 10px; font-weight: normal; font-size: 13px;">
+                >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis quas qui ut cumque, iure exercitationem dicta corporis harum itaque unde odit deserunt quasi illo pariatur, praesentium libero odio! Quasi, porro?
+            </div>
+        </div>
+        <div class="cards">
+            <div style="background-color: #e98a0e; width: 5px; height: 176px; border-top-left-radius: 10px; border-bottom-left-radius: 10px; grid-area: 1/-3;"></div>
+            <div style="height: 400px; text-align: left;margin-top: 10px; font-size:13px;">
+                Super Cool Project
+            </div>
+            <div style="width: 250px; align-self: left;text-align: left; margin-left: 10px; font-weight: normal; font-size: 13px;">
+                >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis quas qui ut cumque, iure exercitationem dicta corporis harum itaque unde odit deserunt quasi illo pariatur, praesentium libero odio! Quasi, porro?
+            </div>
+        </div>
+        <div class="cards">
+            
+        </div>
+        <div class="cards">
+            <div style="background-color: #e98a0e; width: 5px; height: 176px; border-top-left-radius: 10px; border-bottom-left-radius: 10px; grid-area: 1/-3;"></div>
+            <div style="height: 400px; text-align: left;margin-top: 10px; font-size:13px;">
+                Super Cool Project
+            </div>
+            <div style="width: 250px; align-self: center;text-align: left; margin-left: 10px; font-weight: normal; font-size: 13px;">
+                >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis quas qui ut cumque, iure exercitationem dicta corporis harum itaque unde odit deserunt quasi illo pariatur, praesentium libero odio! Quasi, porro?
+            </div>
+        </div>
+        <div class="cards">
+            <div style="background-color: #e98a0e; width: 5px; height: 176px; border-top-left-radius: 10px; border-bottom-left-radius: 10px; grid-area: 1/-3;"></div>
+            <div style="height: 400px; text-align: left;margin-top: 10px; font-size:13px;">
+                Super Cool Project
+            </div>
+            <div style="width: 250px; align-self: center;text-align: left; margin-left: 10px; font-weight: normal; font-size: 13px;">
+                >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis quas qui ut cumque, iure exercitationem dicta corporis harum itaque unde odit deserunt quasi illo pariatur, praesentium libero odio! Quasi, porro?
+            </div>
+        </div>
+    </main>
+</body>
+</html>
